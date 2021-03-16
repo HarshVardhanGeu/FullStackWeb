@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Random Color Generation</title>
+<style type="text/css">
+  #cir
+  {
+    width: 200px;
+    height: 200px;
+    background-color: #abcdef;
+    border-color:black;
+    border-radius: 50%;
+    border-style: solid;
+  }
+  #b1
+  {
+    padding:30px;
+  }
+</style>
+</head>
+<body>
+  <div id="cir">
+    </div>
+    <div id="b1">
+      <input type="button" value="change color">
+      </div>
+  <script type="text/javascript">
+    function randomColorGeneration()
+    {
+      colors= "123456789ABCDEF";
+      color="#";
+      for(var i=0;i<6;i++)
+      {
+        random=Math.ceil(Math.random()*14)
+        color=color+colors[random];
+      }
+      return color;
+    }
+    butn=document.getElementById('b1');
+    circle=document.getElementById('cir');
+    butn.onclick=function()
+    {
+      color=randomColorGeneration();
+      circle.style.backgroundColor=color;
+    }
+
+  </script>
+</body>
+</html>
