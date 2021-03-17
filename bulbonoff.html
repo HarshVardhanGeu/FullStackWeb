@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+  function lightbulbOn()
+  {
+    var imagesArr=new Array("computer1.jpg","computer2.jpg","computer3.jpg");
+    document.getElementById('image').src="onbulb.jpg";
+    var index=Math.floor(Math.random()*imagesArr.length);
+    document.getElementById('randomimg').src=imagesArr[index];
+
+    }
+    function lightbulbOff()
+    {var imagesArr=new Array("computer1.jpg","computer2.jpg","computer3.jpg");
+      document.getElementById('image').src="offbulb.jpg";
+
+      var index=Math.floor(Math.random()*imagesArr.length);
+      document.getElementById('randomimg').src=imagesArr[index];
+    }
+    </script>
+  </head>
+  <body>
+    <div  class="">
+      <img id="image" style="width:120px; height:250px;"src="offbulb.jpg" alt="">
+      <img style="width:100px;height:100px"src="" id="randomimg" alt="">
+    </div>
+    <input type="button"  name="" value="On" onclick="lightbulbOn()">
+    <input type="button" name="" value="Off" onclick="lightbulbOff()">
+  </body>
+</html>
